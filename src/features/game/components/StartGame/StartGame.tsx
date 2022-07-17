@@ -9,6 +9,7 @@ export const StartGame = () => {
   const dispatch = useAppDispatch();
 
   const normalClickHandler = useCallback(() => {
+    dispatch(updateAreaSize(AREA_SIZE.small));
     dispatch(updateGameStatus(GAME_STATUS.process));
   }, [dispatch]);
 
